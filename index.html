@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>劉靖瑩 | 自我介紹</title>
+<style>
+  :root {
+    --deep-1: #05060f;
+    --deep-2: #0b1130;
+    --deep-3: #131a45;
+    --deep-4: #1e2a6e;
+    --star-white: #f5f7ff;
+    --accent: #c9d4ff;
+    --accent-gold: #e8c97e;
+    --text-light: #eef1ff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #05060f, #0b1130, #1e2a6e, #131a45, #05060f);
+    background-size: 400% 400%;
+    animation: breathe 22s ease-in-out infinite;
+    position: relative;
+    padding: 40px 20px;
+  }
+
+  @keyframes breathe {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* 星空層：兩層不同密度與速度的星點，模擬深邃宇宙的呼吸感 */
+  .stars, .stars2 {
+    position: absolute;
+    inset: -20% -20%;
+    pointer-events: none;
+    background-repeat: repeat;
+  }
+
+  .stars {
+    background-image:
+      radial-gradient(1.6px 1.6px at 20px 30px, #ffffff, transparent),
+      radial-gradient(1.2px 1.2px at 90px 60px, #ffffff, transparent),
+      radial-gradient(2px 2px at 150px 20px, #ffffff, transparent),
+      radial-gradient(1.4px 1.4px at 60px 110px, #ffffff, transparent),
+      radial-gradient(1.8px 1.8px at 190px 140px, #ffffff, transparent),
+      radial-gradient(1px 1px at 130px 170px, #ffffff, transparent);
+    background-size: 220px 220px;
+    animation: twinkle 5s ease-in-out infinite alternate, drift 160s linear infinite;
+    opacity: 0.85;
+  }
+
+  .stars2 {
+    background-image:
+      radial-gradient(1px 1px at 40px 40px, #cbd6ff, transparent),
+      radial-gradient(1.2px 1.2px at 100px 10px, #cbd6ff, transparent),
+      radial-gradient(1px 1px at 170px 90px, #cbd6ff, transparent),
+      radial-gradient(1.5px 1.5px at 10px 150px, #cbd6ff, transparent),
+      radial-gradient(1px 1px at 220px 60px, #cbd6ff, transparent);
+    background-size: 320px 320px;
+    animation: twinkle 7s ease-in-out infinite alternate-reverse, drift 260s linear infinite reverse;
+    opacity: 0.5;
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 0.35; }
+    100% { opacity: 0.9; }
+  }
+
+  @keyframes drift {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-220px, -220px); }
+  }
+
+  /* 飄動的柔和星雲光暈，模擬宇宙的呼吸感 */
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.4;
+    animation: float 12s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .glow.one {
+    width: 340px;
+    height: 340px;
+    background: #4b3f8f;
+    top: -80px;
+    left: -90px;
+    animation-duration: 14s;
+  }
+
+  .glow.two {
+    width: 280px;
+    height: 280px;
+    background: #1f5c8f;
+    bottom: -70px;
+    right: -70px;
+    animation-duration: 18s;
+    animation-delay: 2s;
+  }
+
+  .glow.three {
+    width: 220px;
+    height: 220px;
+    background: #6a3f8f;
+    bottom: 20%;
+    left: 5%;
+    animation-duration: 10s;
+    animation-delay: 1s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.08); }
+  }
+
+  .card {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+    width: 100%;
+    background: rgba(15, 20, 50, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 28px;
+    padding: 56px 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 20, 0.55), 0 0 40px rgba(120, 140, 255, 0.12);
+    border: 1px solid rgba(200, 210, 255, 0.25);
+    text-align: center;
+    animation: fadeUp 1.2s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3a3f8f, #1e2a6e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    box-shadow: 0 0 25px rgba(140, 155, 255, 0.55), 0 8px 20px rgba(0, 0, 20, 0.4);
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    letter-spacing: 4px;
+    color: var(--star-white);
+    text-shadow: 0 0 18px rgba(200, 210, 255, 0.5);
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+    font-weight: 600;
+  }
+
+  .quote {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #dbe0ff;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    padding: 16px 20px;
+    border-left: 3px solid var(--accent-gold);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 0 12px 12px 0;
+    text-align: left;
+  }
+
+  .section-title {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: var(--accent-gold);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .tag {
+    background: linear-gradient(135deg, rgba(90, 100, 200, 0.75), rgba(50, 60, 140, 0.85));
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 16px rgba(30, 40, 100, 0.45), 0 0 14px rgba(140, 155, 255, 0.15);
+    border: 1px solid rgba(200, 210, 255, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
+  }
+
+  .tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(30, 40, 100, 0.55), 0 0 20px rgba(160, 175, 255, 0.35);
+  }
+
+  .footer-leaf {
+    margin-top: 36px;
+    font-size: 1.4rem;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 480px) {
+    .card {
+      padding: 40px 24px;
+    }
+    h1 {
+      font-size: 1.7rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="glow one"></div>
+  <div class="glow two"></div>
+  <div class="glow three"></div>
+
+  <div class="card">
+    <div class="avatar">🌿</div>
+    <h1>劉靖瑩</h1>
+    <div class="subtitle">JING YING LIU</div>
+
+    <p class="quote">「生活就像一場旅行，重要的不是目的地，而是沿途盛開的風景與勇於嘗試的自己。」</p>
+
+    <div class="section-title">我的興趣</div>
+    <div class="tags">
+      <span class="tag">✨ 嘗試新事物</span>
+      <span class="tag">🎤 唱歌</span>
+      <span class="tag">🧵 手作</span>
+      <span class="tag">✈️ 旅遊</span>
+    </div>
+
+    <div class="footer-leaf">🍃 🌸 🍃</div>
+  </div>
+
+</body>
+</html>
